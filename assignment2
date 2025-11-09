@@ -1,0 +1,39 @@
+#Task 1
+bacteria = 200
+
+print(f'{"Hour":>5} {"Number of Bacteria":>20}')
+
+for hour in range(0, 16, 5):
+    print(f'{hour:>5} {bacteria:>20}')
+    bacteria *= 32
+
+
+
+#Task 2
+fastest = 0
+second_fastest = 0
+
+for runner in range(1, 11):
+    speed = float(input(f"Enter speed for runner {runner}: "))
+
+    if speed > fastest:
+        second_fastest = fastest
+        fastest = speed
+    elif speed > second_fastest:
+        second_fastest = speed
+
+print(f"\nFastest speed: {fastest}")
+print(f"Second fastest speed: {second_fastest}")
+
+
+
+#Task 3
+rows = 10
+glopp = " " * 5
+
+for r in range(1, rows + 1):
+    a = "*" * r + " " * (rows - r)
+    b = "*" * (rows - r + 1) + " " * (r - 1)
+    c = " " * (rows - r) + "*" * r
+    d = " " * (r - 1) + "*" * (rows - r + 1)
+    print(a + glopp + b + glopp + d + glopp + c)
